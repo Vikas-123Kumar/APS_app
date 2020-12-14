@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apseducation.studentinformation.event.Event">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/video_courses_card"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back_black_24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event"
+                android:textColor="@color/white"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TableRow
+                android:id="@+id/Relative1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="2dp"
+                android:gravity="right"
+                android:weightSum="1">
+
+                <!--                <de.hdodenhof.circleimageview.CircleImageView-->
+                <!--                    android:id="@+id/circular_image_"-->
+                <!--                    android:layout_width="31dp"-->
+                <!--                    android:layout_height="19dp"-->
+                <!--                    android:layout_marginRight="10dp"-->
+                <!--                    android:src="@drawable/profile">-->
+
+                <!--                </de.hdodenhof.circleimageview.CircleImageView>-->
+            </TableRow>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee"
+        android:layout_below="@+id/app_bar"
+       >
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="#eeeeee"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Event Name"
+                android:textColor="@color/black"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:padding="6dp">
+
+
+                <Spinner
+                    android:id="@+id/edit_eventname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Event Name*"
+                    android:inputType="text"
+                    android:textSize="@dimen/text_size">
+
+                </Spinner>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Event Venue"
+                android:textColor="@color/black"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="10dp"
+                android:padding="6dp">
+
+                <Spinner
+                    android:id="@+id/edit_eventaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="@dimen/text_size">
+
+                </Spinner>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Event Date"
+                android:textColor="@color/black"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:padding="6dp">
+
+                <Spinner
+                    android:id="@+id/edit_event_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black">
+
+                </Spinner>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edit_event_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:hint="Name*"
+                android:inputType="text"
+                android:padding="8dp"
+                android:paddingLeft="10dp"
+                android:textSize="15sp">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_event_father"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:hint="Father Name*"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textSize="15sp">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_event_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:hint="Contact No*"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textSize="15sp">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/address_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:hint="Address*"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textSize="15sp">
+
+            </EditText>
+            <ProgressBar
+                android:id="@+id/progresBarevent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone">
+
+            </ProgressBar>
+            <Button
+                android:id="@+id/eventSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_default_filled_round_gradiant"
+                android:text="Submit"
+                android:textColor="@color/white">
+
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

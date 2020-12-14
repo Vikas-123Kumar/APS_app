@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apseducation.studentinformation.admissionregistration.SurveyForm">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/video_courses_card"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back_black_24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Survey"
+                android:textColor="@color/white"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TableRow
+                android:id="@+id/Relative1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="2dp"
+                android:gravity="right"
+                android:weightSum="1">
+
+                <!--                <de.hdodenhof.circleimageview.CircleImageView-->
+                <!--                    android:id="@+id/circular_image_"-->
+                <!--                    android:layout_width="31dp"-->
+                <!--                    android:layout_height="19dp"-->
+                <!--                    android:layout_marginRight="10dp"-->
+                <!--                    android:src="@drawable/profile">-->
+
+                <!--                </de.hdodenhof.circleimageview.CircleImageView>-->
+            </TableRow>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:background="@color/edittext_hint">
+
+        <SearchView
+            android:id="@+id/search_View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/ic_crop_7_5_black_24dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search Here" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_layout"
+        android:isScrollContainer="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#eeeeee"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </ListView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circular_image_survey"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profile">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/click_profile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/header_cover_image"
+                android:layout_gravity="center"
+                android:layout_marginTop="-35dp"
+                android:elevation="5dp"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_camera_alt_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Personal detail:"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_text_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/et_background_outlines"
+                    android:drawablePadding="10dp"
+                    android:hint="Email Id*"
+                    android:inputType="textEmailAddress"
+                    android:padding="8dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/email_image"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_alignParentRight="true"-->
+                <!--                    android:layout_centerVertical="true"-->
+                <!--                    android:layout_marginRight="40dp"-->
+                <!--                    android:src="@drawable/hide_password">-->
+
+                <!--                </ImageView>-->
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edit_text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="10dp"
+                android:hint="Name*"
+                android:inputType="text"
+                android:padding="8dp"
+                android:paddingLeft="10dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+
+            <EditText
+                android:id="@+id/edit_text_father"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="10dp"
+                android:hint="Father Name*"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_text_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="10dp"
+                android:hint="Contact No*"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/edit_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="DOB*"
+                android:padding="8dp"
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/edit_height"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.46"
+                    android:background="@drawable/et_background_outlines"
+                    android:gravity="center"
+                    android:hint="Height in cm*"
+                    android:inputType="numberDecimal"
+                    android:padding="8dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.08">
+
+                </View>
+
+                <EditText
+                    android:id="@+id/weight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.46"
+                    android:background="@drawable/et_background_outlines"
+                    android:gravity="center"
+                    android:hint="Weight in kg*"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/blood_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+
+                <Spinner
+                    android:id="@+id/edit_blood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Address:"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edit_text_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="10dp"
+                android:hint="Village*"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_text_tehsil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="10dp"
+                android:hint="Tehsil*"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="10dp"
+                android:padding="6dp">
+
+                <Spinner
+                    android:id="@+id/edit_text_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="State*"
+                    android:inputType="text">
+
+                </Spinner>
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edit_text_dist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="10dp"
+                android:hint="Dist*"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_text_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="10dp"
+                android:hint="Pin Code*"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+
+            <LinearLayout
+                android:id="@+id/_department_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/department_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Course:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/department_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/department_text"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/et_background_outlines"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:id="@+id/dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                        android:text="Select Courses*"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Qualification:"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/board_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/_department_linear"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:id="@+id/text_10th"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="10th:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/tenth_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/defence_layout"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48"
+                        android:background="@drawable/et_background_outlines"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <Spinner
+                            android:id="@+id/board_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.48">
+
+                        </Spinner>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.04">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48"
+                        android:background="@drawable/et_background_outlines"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <Spinner
+                            android:id="@+id/year_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.48">
+
+                        </Spinner>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/twelve_layout_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/_department_linear"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="12th:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/twelve_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/defence_layout"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48"
+                        android:background="@drawable/et_background_outlines"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <Spinner
+                            android:id="@+id/board_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.48">
+
+                        </Spinner>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.04">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48"
+                        android:background="@drawable/et_background_outlines"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <Spinner
+                            android:id="@+id/year_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.48">
+
+                        </Spinner>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+
+                android:id="@+id/text_graduation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="Graduation:"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+
+            <LinearLayout
+                android:id="@+id/graduation_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/defence_layout"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/year_grad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.60"
+                    android:background="@drawable/et_background_outlines"
+                    android:drawablePadding="15dp"
+                    android:gravity="center"
+                    android:hint="year"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1">
+
+                </View>
+
+                <EditText
+                    android:id="@+id/board_grad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.60"
+                    android:background="@drawable/et_background_outlines"
+                    android:drawablePadding="15dp"
+                    android:gravity="center"
+                    android:hint="University"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1">
+
+                </View>
+
+                <EditText
+                    android:id="@+id/subject_grad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.60"
+                    android:background="@drawable/et_background_outlines"
+                    android:drawablePadding="15dp"
+
+                    android:gravity="center"
+                    android:hint="Course"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/specialize_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/year_passout_linear"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/specialigation"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/specialization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/et_background_outlines"
+                    android:drawablePadding="10dp"
+                    android:hint="Specialized Coaching"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Family Background:"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/family"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="0.60"
+                    android:text="@string/family"
+                    android:textColor="@color/black"
+                    android:textSize="14.5sp">
+
+                </TextView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05">
+
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.35"
+                    android:background="@drawable/et_background_outlines">
+
+                    <Spinner
+                        android:id="@+id/family_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.20">
+
+                    </Spinner>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.60"
+                    android:text="@string/service"
+                    android:textColor="@color/black"
+                    android:textSize="14.5sp">
+
+                </TextView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05">
+
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.35"
+                    android:background="@drawable/et_background_outlines">
+
+                    <Spinner
+                        android:id="@+id/service_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.35">
+
+                    </Spinner>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/other"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.20"
+                    android:text="Other:"
+                    android:textColor="@color/black"
+                    android:textSize="14.5sp">
+
+                </TextView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.10">
+
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.70"
+                    android:background="@drawable/et_background_outlines">
+
+                    <Spinner
+                        android:id="@+id/other_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.20"
+                        android:gravity="center_horizontal">
+
+                    </Spinner>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progresBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone">
+
+            </ProgressBar>
+
+            <Button
+                android:id="@+id/addmision_button"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_default_filled_round_gradiant"
+                android:text="Submit"
+                android:textColor="@color/white">
+
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

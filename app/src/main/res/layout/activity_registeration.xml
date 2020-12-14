@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.apseducation.studentinformation.registration.Registration">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/video_courses_card"
+        tools:ignore="MissingConstraints">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            app:navigationIcon="@drawable/ic_arrow_back_black_24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registration"
+                android:textColor="@color/white"
+                android:textSize="15sp">
+
+            </TextView>
+
+            <TableRow
+                android:id="@+id/Relative1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="2dp"
+                android:gravity="right"
+                android:weightSum="1">
+
+            </TableRow>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:background="@color/edittext_hint">
+
+        <SearchView
+            android:id="@+id/searchView_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_crop_7_5_black_24dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search Here" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_layout"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_layout"
+            android:layout_marginTop="10dp"
+            android:background="#eeeeee"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/listview_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </ListView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circular_image_register"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profile">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <LinearLayout
+                android:id="@+id/defence_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/marital_linear"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:paddingLeft="10dp"-->
+                <!--                    android:text="@string/defence"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="16sp">-->
+
+                <!--                </TextView>-->
+
+                <LinearLayout
+                    android:id="@+id/defence_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/department_text"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/et_background_outlines"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:id="@+id/dropdown_reg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                        android:drawablePadding="10dp"
+                        android:text="Select Course*"
+                        android:textColor="@color/black"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:orientation="horizontal">-->
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/price"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/et_background_outlines"-->
+<!--                    android:drawablePadding="10dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:text="Course fees"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="@dimen/text_size">-->
+
+<!--                </TextView>-->
+
+<!--               -->
+<!--            </LinearLayout>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="Personal Detail:"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_text_r_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/et_background_outlines"
+                    android:drawablePadding="15dp"
+                    android:hint="Email Id*"
+                    android:inputType="textEmailAddress"
+                    android:padding="8dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/email_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40dp"
+                    android:src="@drawable/ic_visibility_black_24dp">
+
+                </ImageView>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edit_text_r_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="15dp"
+                android:hint="Name*"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+
+            <EditText
+                android:id="@+id/edit_text_r_father"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="10dp"
+                android:hint="Father Name*"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/edit_r_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="DOB*"
+                android:inputType="date"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edit_text_r_occupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="15dp"
+                android:hint="Father Occupation*"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_text_r_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="15dp"
+                android:hint="Contact No*"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/whatsappNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="15dp"
+                android:hint="Whatsapp Number"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+            <LinearLayout
+                android:id="@+id/table_row_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginRight="2dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <EditText
+                    android:id="@+id/edit_r_height"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/et_background_outlines"
+                    android:gravity="center"
+                    android:hint="Height in cm*"
+                    android:inputType="numberDecimal"
+                    android:padding="8dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+
+                <EditText
+                    android:id="@+id/edit_weight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/et_background_outlines"
+                    android:gravity="center"
+                    android:hint="Weight in kg*"
+                    android:inputType="numberDecimal"
+                    android:padding="8dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/blood_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+
+                <Spinner
+                    android:id="@+id/_blood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Address:"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edit_text_r_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="15dp"
+                android:hint="Village*"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+            <LinearLayout
+                android:id="@+id/state_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <Spinner
+                    android:id="@+id/state_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </Spinner>
+
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/edit_text_r_dist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="15dp"
+                android:hint="Dist*"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+
+            <EditText
+                android:id="@+id/edit_text_r_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="15dp"
+                android:hint="Pin Code*"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+            <LinearLayout
+                android:id="@+id/_department_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/department_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="Category:*"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/department_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/et_background_outlines"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <Spinner
+                        android:id="@+id/category_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/marital_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/_department_linear"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/marital_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="Marital status:*"
+                    android:textColor="@color/black"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/marital_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/et_background_outlines"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+
+                    <Spinner
+                        android:id="@+id/_marital"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Education:"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+
+            <TextView
+
+                android:id="@+id/text_10th"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="10th:"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+
+            <LinearLayout
+                android:id="@+id/tenth_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/defence_layout"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <Spinner
+                        android:id="@+id/board_10th"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.04">
+
+                </View>
+
+                <LinearLayout
+                    android:id="@+id/yearLayout10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <Spinner
+                        android:id="@+id/year_10th"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48">
+
+                    </Spinner>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/subject_10th"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:gravity="center"
+                    android:hint="Subject"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+                <EditText
+                    android:id="@+id/percentage_10th"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:gravity="center"
+                    android:hint="Percentage"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+            </LinearLayout>
+
+
+            <TextView
+
+                android:id="@+id/text_12th"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="12th:"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+
+            <LinearLayout
+                android:id="@+id/twelve_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/defence_layout"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <Spinner
+                        android:id="@+id/board_12th"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48">
+
+                    </Spinner>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.04">
+
+                </View>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <Spinner
+                        android:id="@+id/year_12th"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.48">
+
+                    </Spinner>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/subject_12th"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:gravity="center"
+                    android:hint="Subject"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+                <EditText
+                    android:id="@+id/percentage_12th"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:gravity="center"
+                    android:hint="Percentage"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+            </LinearLayout>
+
+
+            <TextView
+
+                android:id="@+id/text_aspiring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="10+2 Aspiring:"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/year_aspiring"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:gravity="center"
+                    android:hint="Year"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+                <EditText
+                    android:id="@+id/board_aspiring"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:gravity="center"
+                    android:hint="Board"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/subject_aspiring"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/et_background_outlines"
+                android:drawablePadding="15dp"
+                android:gravity="center"
+                android:hint="Subject"
+                android:inputType="text"
+                android:padding="5dp"
+                android:textSize="@dimen/text_size">
+
+            </EditText>
+
+            <TextView
+
+                android:id="@+id/text_graduation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="Graduation:"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+
+            <LinearLayout
+                android:id="@+id/graduation_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/defence_layout"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/year_graduation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:drawablePadding="15dp"
+                    android:gravity="center"
+                    android:hint="Year"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.02">
+
+                </View>
+
+                <EditText
+                    android:id="@+id/board_graduation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:drawablePadding="15dp"
+                    android:gravity="center"
+                    android:hint="University"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.02">
+
+                </View>
+
+                <EditText
+                    android:id="@+id/subject_graduation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:drawablePadding="15dp"
+
+                    android:gravity="center"
+                    android:hint="Course"
+                    android:inputType="text"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.02">
+
+                </View>
+
+                <EditText
+                    android:id="@+id/percentage_graduation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.48"
+                    android:background="@drawable/et_background_outlines"
+                    android:drawablePadding="15dp"
+                    android:gravity="center"
+                    android:hint="Percentage"
+                    android:inputType="numberDecimal"
+                    android:padding="5dp"
+                    android:textSize="@dimen/text_size">
+
+                </EditText>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="Documents:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size">
+
+            </TextView>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.70"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:text=" Identification*:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.8"
+                    android:background="@drawable/et_background_outlines"
+                    android:orientation="horizontal"
+                    android:padding="3dp">
+
+                    <Spinner
+                        android:id="@+id/identification_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textSize="@dimen/text_size">
+
+                    </Spinner>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/identification_image"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight=".50"
+                    android:src="@drawable/ic_cloud_upload_black_24dp">
+
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:text="10th MarkSheet:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size">
+
+                </TextView>
+
+                <View
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.50">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/mark_10th"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight=".50"
+                    android:src="@drawable/ic_cloud_upload_black_24dp">
+
+                </ImageView>
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:text="12th MarkSheet:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size">
+
+                </TextView>
+
+                <View
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.50">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/mark_12"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight=".50"
+                    android:src="@drawable/ic_cloud_upload_black_24dp">
+
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:text=" Graduation:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size">
+
+                </TextView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.50">
+
+                </View>
+
+                <ImageView
+                    android:id="@+id/mark_grad"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight=".50"
+                    android:src="@drawable/ic_cloud_upload_black_24dp">
+
+                </ImageView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Declaration:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size">
+
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <CheckBox
+                    android:id="@+id/checkbox_reg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.08">
+
+                </CheckBox>
+
+                <TextView
+                    android:id="@+id/declaration"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.92"
+                    android:text="@string/declaration"
+                    android:textColor="@color/black"
+                    android:textSize="14sp">
+
+                </TextView>
+            </LinearLayout>
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="1">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="0.60"-->
+<!--                    android:text="Payment Status:"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="16sp">-->
+
+<!--                </TextView>-->
+
+<!--                <View-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="0.05">-->
+
+<!--                </View>-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="0.35"-->
+<!--                    android:background="@drawable/et_background_outlines">-->
+
+<!--                    <Spinner-->
+<!--                        android:id="@+id/payment_spinner"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="0.35">-->
+
+<!--                    </Spinner>-->
+
+<!--                </RelativeLayout>-->
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/progresBar_reg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+
+                </ProgressBar>
+
+                <Button
+                    android:id="@+id/registeration_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/btn_default_filled_round_gradiant"
+                    android:text="Submit"
+                    android:textColor="@color/white">
+
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Student Information.iml" filepath="$PROJECT_DIR$/../Student Information.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2019612928/Student_Information.iml" filepath="$PROJECT_DIR$/.idea/modules/-2019612928/Student_Information.iml" group="Student_Information" />
+      <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" group="Student Information/app" />
+      <module fileurl="file://$PROJECT_DIR$/../razorpay-android-3.8.8/razorpay-android-3.8.8.iml" filepath="$PROJECT_DIR$/../razorpay-android-3.8.8/razorpay-android-3.8.8.iml" group="Student Information/razorpay-android-3.8.8" />
+    </modules>
+  </component>
+</project>
